@@ -3,7 +3,6 @@ package com.example.veriffsdktest
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mvp.kyc.VeriffActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startActivity(Intent(this, VeriffActivity::class.java))
+      //  startActivity(Intent(this, VeriffActivity::class.java))
 
     }
 

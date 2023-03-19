@@ -1,6 +1,9 @@
 pluginManagement {
     repositories {
+        maven { url 'https://jitpack.io' }
+
         maven { url "https://cdn.veriff.me/android/" } //make sure to add this before other repos
+
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -9,7 +12,10 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url 'https://jitpack.io' }
+
         maven { url "https://cdn.veriff.me/android/" } //make sure to add this before other repos
+
         google()
         mavenCentral()
     }
