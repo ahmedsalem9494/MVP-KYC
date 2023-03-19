@@ -19,7 +19,6 @@ class VeriffActivity : AppCompatActivity() {
         val branding: Branding = Branding.Builder()
             .themeColor(resources.getColor(R.color.accent1))
             .backgroundColor(resources.getColor(R.color.background2))
-            //  .statusBarColor(resources.getColor(R.color.background2)) // the same as backgroundColor
             .toolbarIcon(R.drawable.mvp_logo)
             //  .toolbarIconProvider(toolbarIconProvider = IconDrawableProvider(""))
             .primaryButtonBackgroundColor(resources.getColor(R.color.accent1))
@@ -27,10 +26,8 @@ class VeriffActivity : AppCompatActivity() {
             .secondaryTextColor(resources.getColor(R.color.textColor1))
             .bulletPoint(R.drawable.bullet_point_icon)
             .notificationIcon(R.drawable.mvp_icon) // not found in ios
-            // .font(Font.Builder().setNormalAndBold(R.font.poppins_regular,R.font.poppins_semi_bold).build())
             .font(Font.Builder().setBold(R.font.poppins_semi_bold).build())
             .font(Font.Builder().setRegular(R.font.poppins_regular).build())
-            //.buttonHeight(50f)  // it will be always 60
             .build()
 
         val configuration = Configuration.Builder()
