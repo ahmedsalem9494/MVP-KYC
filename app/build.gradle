@@ -43,6 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 
-   // implementation 'com.github.ahmedsalem9494:MVP-KYC:Tag'
+    implementation 'com.github.ahmedsalem9494:MVP-KYC:1.0.1'
 
 }
