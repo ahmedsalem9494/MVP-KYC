@@ -3,10 +3,7 @@ package com.mvp.kyc
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.veriff.Branding
-import com.veriff.Configuration
-import com.veriff.Result
-import com.veriff.Sdk
+import com.veriff.*
 import java.util.*
 
 class VeriffActivity : AppCompatActivity() {
@@ -18,20 +15,21 @@ class VeriffActivity : AppCompatActivity() {
         setContentView(R.layout.activity_veriff)
 
         val appLocale = Locale.ENGLISH
+
         val branding: Branding = Branding.Builder()
-            .themeColor(resources.getColor(R.color.purple_200))
-            .backgroundColor(resources.getColor(R.color.purple_200))
+            .themeColor(resources.getColor(R.color.accent1))
+            .backgroundColor(resources.getColor(R.color.background2))
             //  .statusBarColor(resources.getColor(R.color.background2)) // the same as backgroundColor
-            .toolbarIcon(R.drawable.ic_launcher_background)
-            // .toolbarIconProvider(toolbarIconProvider = IconDrawableProvider(""))
-            .primaryButtonBackgroundColor(resources.getColor(R.color.purple_200))
-            .primaryTextColor(resources.getColor(R.color.purple_200))
-            .secondaryTextColor(resources.getColor(R.color.purple_200))
-            .bulletPoint(R.drawable.ic_launcher_foreground)
-            .notificationIcon(R.drawable.ic_launcher_background) // not found in ios
+            .toolbarIcon(R.drawable.mvp_logo)
+            //  .toolbarIconProvider(toolbarIconProvider = IconDrawableProvider(""))
+            .primaryButtonBackgroundColor(resources.getColor(R.color.accent1))
+            .primaryTextColor(resources.getColor(R.color.textColor1))
+            .secondaryTextColor(resources.getColor(R.color.textColor1))
+            .bulletPoint(R.drawable.bullet_point_icon)
+            .notificationIcon(R.drawable.mvp_icon) // not found in ios
             // .font(Font.Builder().setNormalAndBold(R.font.poppins_regular,R.font.poppins_semi_bold).build())
-            // .font(Font.Builder().setBold(com.veriff.R.font.poppins_semi_bold).build())
-            // .font(Font.Builder().setRegular(com.veriff.R.font.poppins_regular).build())
+            .font(Font.Builder().setBold(R.font.poppins_semi_bold).build())
+            .font(Font.Builder().setRegular(R.font.poppins_regular).build())
             //.buttonHeight(50f)  // it will be always 60
             .build()
 
