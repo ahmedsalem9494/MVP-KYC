@@ -3,14 +3,12 @@
 # How to Use
 
 
-## Step 1. Add it in your root build.gradle at the end of repositories:
-   	allprojects {
+## Step 1. Add it in your root settings.gradle inside repositories:
 		repositories {
-			
 			maven { url 'https://jitpack.io' }
-			 maven { url "https://cdn.veriff.me/android/" } 
+			maven { url "https://cdn.veriff.me/android/" } 
 		}
-	}
+	
   
 ## Step 2. Add the dependency
 
