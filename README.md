@@ -6,8 +6,9 @@
 ## Step 1. Add it in your root build.gradle at the end of repositories:
    	allprojects {
 		repositories {
-			...
+			
 			maven { url 'https://jitpack.io' }
+			 maven { url "https://cdn.veriff.me/android/" } 
 		}
 	}
   
@@ -19,6 +20,6 @@
   
 ## Step 3. Call from Activity or Fragment
 
-        val sessionUrl = ""
+        val sessionUrl = "your_session_url"
         showMVPKYCScreen(sessionUrl)
   
