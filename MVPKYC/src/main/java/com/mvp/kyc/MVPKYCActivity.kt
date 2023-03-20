@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.veriff.*
 import java.util.*
 
-class VeriffActivity : AppCompatActivity() {
+class MVPKYCActivity : AppCompatActivity() {
 
     private val REQUEST_CODE = 15
 
@@ -14,13 +14,14 @@ class VeriffActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_veriff)
 
+        val sessionUrl = intent.getStringExtra(EXTRA_SESSION_URL_KEY) ?: ""
+
         val appLocale = Locale.ENGLISH
 
         val branding: Branding = Branding.Builder()
             .themeColor(resources.getColor(R.color.accent1))
             .backgroundColor(resources.getColor(R.color.background2))
             .toolbarIcon(R.drawable.mvp_logo)
-            //  .toolbarIconProvider(toolbarIconProvider = IconDrawableProvider(""))
             .primaryButtonBackgroundColor(resources.getColor(R.color.accent1))
             .primaryTextColor(resources.getColor(R.color.textColor1))
             .secondaryTextColor(resources.getColor(R.color.textColor1))
@@ -38,7 +39,7 @@ class VeriffActivity : AppCompatActivity() {
         val intent: Intent =
             Sdk.createLaunchIntent(
                 this,
-                "https://alchemy.veriff.com/v/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uX2lkIjoiZDlmMGFkMjctZmJlNi00OTdkLTk3NmEtZTdjMjMyNjcxZDA1IiwiaWlkIjoiZjUzMzI3OGQtNWI3ZS00ZTRlLWJkZTEtNGJhZTBkM2EwZDQwIiwiaWF0IjoxNjc5MjI4NDUzfQ.9_XIGmxTNGMoTjZbuRIVuIDXpgP6624ZzQNReWD2620",
+                sessionUrl,
                 configuration
             )
         startActivityForResult(intent, REQUEST_CODE)
@@ -56,13 +57,10 @@ class VeriffActivity : AppCompatActivity() {
     private fun handleResult(result: Result) {
         when (result.status) {
             Result.Status.DONE -> {
-                //findNavController().navigate(VeriffFragmentDirections.actionVeriffFragmentToVeriffInfoFragment(args.verification))
             }
             Result.Status.CANCELED -> {
-                //findNavController().navigate(VeriffFragmentDirections.navigateToEndingFragment())
             }
             Result.Status.ERROR -> {
-                //  findNavController().navigate(VeriffFragmentDirections.navigateToEndingFragment())
             }
         }
     }

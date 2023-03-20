@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".VeriffActivity"
+            android:name=".MVPKYCActivity"
             android:exported="false" />
     </application>
 
