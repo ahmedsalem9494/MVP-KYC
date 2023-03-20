@@ -17,4 +17,8 @@
 	        implementation 'com.github.ahmedsalem9494:MVP-KYC:1.0.3'
 	}
   
+## Step 3. Call from Activity or Fragment
+
+        val sessionUrl = ""
+        showMVPKYCScreen(sessionUrl)
   
